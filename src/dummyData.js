@@ -51,6 +51,60 @@ export const Users = [
   },
 ];
 
+export const Comments = [
+  {
+    id:1,
+    username: "Sahajpreet Singh",
+    comment: 'a'
+  },
+  {
+    id:2,
+    username: "Nishkarsh Jain",
+    comment: 'b'
+  },
+  {
+    id:3,
+    username: "Huihuihui",
+    comment: 'a'
+  },
+  {
+    id:4,
+    username: "Dank",
+    comment: 'a'
+  },
+  {
+    id:5,
+    username: "Thomsan Baba",
+    comment: 'a'
+  },
+  {
+    id:6,
+    username: "Sachin",
+    comment: 'a'
+  },
+  {
+    id:7,
+    username: "Fluffy",
+    comment: 'a'
+  },
+  {
+    id:8,
+    username: "Raviraj",
+    comment: 'a'
+  },
+  {
+    id:9,
+    username: "Gary Duty",
+    comment: 'a'
+  },
+  {
+    id:10,
+    username: "Narendra Modi",
+    comment: 'a'
+  },
+];
+
+
 export const Posts = [
   {
     id: 1,
@@ -68,6 +122,7 @@ export const Posts = [
     userId: 2,
     like: 2,
     comment: 1,
+
   },
   {
     id: 3,

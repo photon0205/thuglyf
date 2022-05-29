@@ -7,7 +7,7 @@ export default function Login() {
         <div className="loginLeft">
           <h3 className="loginLogo">Thug Lyf</h3>
           <span className="loginDesc">
-            Connect with friends and the world around you on Thug Lyf.
+            Connect with friends and the world around you on Thug Lyf
           </span>
         </div>
         <div className="loginRight">

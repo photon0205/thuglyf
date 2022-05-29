@@ -15,6 +15,8 @@ const commentHandler =()=>{
   
 }
 
+const {date, photo, desc} = post;
+
   return (
     <div className="post">
       <div className="postWrapper">
@@ -28,12 +30,12 @@ const commentHandler =()=>{
             <span className="postUsername">
               {Users.filter((u) => u.id === post?.userId)[0].username}
             </span>
-            <span className="postDate">{post.date}</span>
+            <span className="postDate">{date}</span>
           </div>
         </div>
         <div className="postCenter">
           <span className="postText">{post?.desc}</span>
-          <img className="postImg" src={post.photo} alt="" />
+          <img className="postImg" src={photo} alt="" />
         </div>
         <div className="postBottom">
           <div className="postBottomLeft">
@@ -45,6 +47,7 @@ const commentHandler =()=>{
             <span className="postCommentText" onClick={commentHandler}>{post.comment} comments</span>
           </div>
         </div>
+        <Comment />
       </div>
     </div>
   );
