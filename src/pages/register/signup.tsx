@@ -1,6 +1,8 @@
 import "./signup.css";
 import Select from 'react-select'
-import makeAnimated from 'react-select/animated';
+import userData from '../../types/user';
+import {db} from '../../services/firebase'
+import { doc, setDoc } from "firebase/firestore";
 
 const options = [
   { value: 'Music', label: 'Music' },
@@ -16,6 +18,35 @@ const options = [
 const MyComponent = () => (
   <Select options={options} />
 )
+function signup(obj: userData) {
+    
+  //is email valid?
+  if (obj.email === "") return;
+  if (obj.password !== obj.confirmPassword) {
+      return;    
+  }
+
+  //user exists already?
+  db.doc(`/users/${obj.userHandle}`).get
+  .then((doc: any) => {
+      if (doc.exists) return;
+      else {
+          return firebase.auth()
+              .createUserWithEmailAndPassword(obj.email, obj.password);
+      }
+  })
+      
+  //adding data to collection
+  .then((data: any) => {
+      return db.doc(`/users/${obj.userHandle}`).set({
+          email: obj.email,
+          password: obj.password,
+          userHandle: obj.userHandle,
+          userImage: obj.userImage || "gs://thuglyf-53648.appspot.com/no-img.png",
+          userInterests: obj.userInterests,        
+      })  
+  })
+}
 
 export default function Register() {
   return (
