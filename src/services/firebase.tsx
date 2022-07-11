@@ -9,7 +9,7 @@ import { getStorage } from "firebase/storage";
 import onePost from '../types/post';
 import comment from '../types/comment';
 
-
+// Why repeating the firebase config ??
 const firebaseConfig = {
     apiKey: "AIzaSyDI3B33vbQbHR-C9JmXIbdFzJE2dPUrYNY",
     authDomain: "thuglyf-53648.firebaseapp.com",

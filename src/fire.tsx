@@ -1,5 +1,6 @@
 import firebase from 'firebase/compat/app';
 
+// Use env and guthub Secrets.(Google about it.)
 const firebaseConfig = {
     apiKey: "AIzaSyD_uOx55o8lFUDOAED8UqiYVcBayheKY1U",
     authDomain: "social-3352c.firebaseapp.com",
@@ -10,6 +11,7 @@ const firebaseConfig = {
     measurementId: "G-R9PS0KKXRY"
   };
   
+  //Variable Names should make sense.
   const tl = firebase.initializeApp(firebaseConfig);
   
   export default tl;

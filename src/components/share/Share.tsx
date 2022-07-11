@@ -1,5 +1,8 @@
 import "./share.css";
 
+// Use ES6 and TS as well.
+//Variable Names should make sense.
+
 export default function Share() {
   return (
     <div className="share">

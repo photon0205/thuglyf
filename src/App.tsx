@@ -1,11 +1,14 @@
 import React, { useState, useEffect } from 'react';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import './App.css';
+//Variable Names should make sense.
 import tl from './fire'
 import Home from './pages/home/home';
 import Login from './pages/login/login';
 import Signup from './pages/register/signup';
 
+// Use ES6 and TS as well.
+// const App: React.FC = () => {..}
 function App(){
   return (
     <div className="App">
@@ -21,7 +24,17 @@ function App(){
 
 }
 
+// For folder and file structure follow the convention mentioned during the lecture.(refer Services, API and Firebae)
+// > services
+//    >api
+//       >axios.ts
+//       >apiService.ts
+//       >animalApi.ts
+//    >firebase
+
 const Raw = () =>{
+  // Mention types while using useState like,  useState<string>('');
+  // If not being used, why is this oiece of code here ??
   const [user, setUser] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');

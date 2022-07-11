@@ -4,6 +4,8 @@ import userData from '../../types/user';
 import {db} from '../../services/firebase'
 import { doc, setDoc } from "firebase/firestore";
 
+// Why is the folder and file name different ?? (register(folder) & signup(file))
+// If this is constant, put in a seperate constants file/folder.
 const options = [
   { value: 'Music', label: 'Music' },
   { value: 'Animal', label: 'Animal' },
@@ -14,10 +16,11 @@ const options = [
   { value: 'Relationship', label: 'Relationship' }
 
 ]
-
+// Use ES6 and TS as well.
 const MyComponent = () => (
   <Select options={options} />
 )
+// Where is this beng called ??
 function signup(obj: userData) {
     
   //is email valid?
@@ -48,6 +51,7 @@ function signup(obj: userData) {
   })
 }
 
+// Where is the logic for signup ??
 export default function Register() {
   return (
     <div className="login">

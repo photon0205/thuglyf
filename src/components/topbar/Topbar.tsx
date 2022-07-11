@@ -1,5 +1,6 @@
 import "./topbar.css";
 
+// Use ES6 and TS as well.
 export default function Topbar() {
   return (
     <div className="topbarContainer">

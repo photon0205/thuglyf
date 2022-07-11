@@ -1,5 +1,6 @@
 import "./login.css";
 
+// Use ES6 and TS as well.
 export default function Login() {
   return (
     <div className="login">
@@ -14,6 +15,7 @@ export default function Login() {
           <div className="loginBox">
             <input placeholder="Email" className="loginInput" />
             <input placeholder="Password" className="loginInput" />
+            {/* Where's the call for login , forgot password etc...?? */}
             <button className="loginButton">Log In</button>
             <span className="loginForgot">Forgot Password?</span>
             <button className="loginRegisterButton">
